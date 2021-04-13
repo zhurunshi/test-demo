@@ -15,8 +15,12 @@ public class App {
     	Date d = c.getTime();
     	SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
     	System.out.println(sdf1.format(d));
+    	System.out.println("===============");
     	SimpleDateFormat sdf2 = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.SSS");
     	System.out.println(sdf2.format(d));
+    	System.out.println("===============");
+    	SimpleDateFormat sdf3 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
+    	System.out.println(sdf3.format(d));
     	
     	/*
     	 * yyyy 正常年份

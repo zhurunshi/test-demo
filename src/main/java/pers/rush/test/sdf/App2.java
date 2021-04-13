@@ -16,6 +16,7 @@ public class App2 {
 
 class MyThread extends Thread { 
 	String dateStr = "2020-12-27 22:11:33.444";
+	
 	@Override
 	public void run() {
 		Date d = null;
