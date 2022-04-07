@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @author Rush
  *
  */
-public class BubbleSort {
+public class _1_BubbleSort {
 	static void asc(int[] a) {
 		// 外层循环控制总共循环几轮 
 		// 对n个数进行排序，需要n-1轮比较
@@ -42,9 +42,9 @@ public class BubbleSort {
 	
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(Const.nums1));
-		BubbleSort.asc(Const.nums1);
+		_1_BubbleSort.asc(Const.nums1);
 		System.out.println(Arrays.toString(Const.nums1));
-		BubbleSort.desc(Const.nums1);
+		_1_BubbleSort.desc(Const.nums1);
 		System.out.println(Arrays.toString(Const.nums1));
 	}
 }
