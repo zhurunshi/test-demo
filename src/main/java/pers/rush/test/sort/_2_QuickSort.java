@@ -1,5 +1,7 @@
 package pers.rush.test.sort;
 
+import java.util.Arrays;
+
 /**
  * 快速排序
  * 1.选定中心轴
@@ -11,9 +13,47 @@ package pers.rush.test.sort;
  */
 public class _2_QuickSort {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void qsort(int[] a, int low, int high) {
+		if (low < high) { // 当low和high重合时，就不需要继续循环
+			int mid = partition(a, low, high);
+			qsort(a, low, mid-1);
+			qsort(a, mid+1, high);
+		}
+	}
+	
+	private static int partition(int[] a, int low, int high) {
+		// 取最后一位作为基准
+		int pivot = a[high];
+		int i = low;
+		
+		for (int j = low; j < high; ++j) {
+			// 比pivot小的，全部换到前面去
+			if (a[j] < pivot) {
+				// 将a[j]和a[i]交换，并且i+1
+				swap(a, j, i++);
+			}
+		}
+		// 最后将i指向的元素和pivot元素互换
+		swap(a, i, high);
+		return i;
+	}
 
+	/**
+	 * 将a[l]和a[r]元素交换
+	 * @param a
+	 * @param l
+	 * @param r
+	 */
+	private static void swap(int[] a, int l, int r) {
+		int t = a[l];
+		a[l] = a[r];
+		a[r] = t;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(Arrays.toString(Const.nums1));
+		qsort(Const.nums1, 0, Const.nums1.length-1);
+		System.out.println(Arrays.toString(Const.nums1));
 	}
 
 }
