@@ -2,7 +2,7 @@ package pers.rush.test.sort;
 
 public class Const {
 	static int[] nums1 = {
-			19,9,23,21,46,26,88,43,23,98
+			19,9,23,21,46,26,98,43,23,88
 	};
 	
 	public static String toString(int[] a) {
