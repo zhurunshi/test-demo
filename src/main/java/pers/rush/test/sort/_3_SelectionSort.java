@@ -11,9 +11,8 @@ public class _3_SelectionSort {
 					min = j;
 				}
 			}
-			int t = a[min];
-			a[min] = a[i];
-			a[i] = t;
+			// 遍历一遍后，找到最小的再交换 
+			SortUtils.swap(a, min, i);
 		}
 	}
 	

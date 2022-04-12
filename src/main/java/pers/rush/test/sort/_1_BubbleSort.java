@@ -18,9 +18,7 @@ public class _1_BubbleSort {
 			// 内层循环 
 			for (int j = 0; j < a.length-1-i; ++j ) {
 				if (a[j] > a[j+1]) {
-					int t = a[j+1];
-					a[j+1] = a[j];
-					a[j] = t;
+					SortUtils.swap(a, j, j+1);
 				}
 			}
 		}
@@ -32,9 +30,7 @@ public class _1_BubbleSort {
 			// 内层循环 
 			for (int j = 0; j < a.length-1-i; ++j ) {
 				if (a[j] < a[j+1]) {
-					int t = a[j+1];
-					a[j+1] = a[j];
-					a[j] = t;
+					SortUtils.swap(a, j, j+1);
 				}
 			}
 		}

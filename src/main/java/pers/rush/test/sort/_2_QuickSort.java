@@ -30,24 +30,12 @@ public class _2_QuickSort {
 			// 比pivot小的，全部换到前面去
 			if (a[j] < pivot) {
 				// 将a[j]和a[i]交换，并且i+1
-				swap(a, j, i++);
+				SortUtils.swap(a, j, i++);
 			}
 		}
 		// 最后将i指向的元素和pivot元素互换
-		swap(a, i, high);
+		SortUtils.swap(a, i, high);
 		return i;
-	}
-
-	/**
-	 * 将a[l]和a[r]元素交换
-	 * @param a
-	 * @param l
-	 * @param r
-	 */
-	private static void swap(int[] a, int l, int r) {
-		int t = a[l];
-		a[l] = a[r];
-		a[r] = t;
 	}
 
 	public static void main(String[] args) {
